@@ -183,7 +183,7 @@ export function ChatInterface() {
                   </div>
                   <div className="flex items-center space-x-2">
                     <Sparkles className="h-5 w-5 text-blue-500" />
-                    <span className="font-semibold text-sm">AI Platform</span>
+                    <span className="font-semibold text-sm">1 thought</span>
                   </div>
                 </div>
 

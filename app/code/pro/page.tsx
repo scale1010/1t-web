@@ -188,7 +188,7 @@ export default function CodeProPage() {
               onClick={handleAIPlatformClick}
               className="text-sm font-medium text-foreground hover:text-primary transition-colors"
             >
-              AI Platform
+              1 thought
             </Link>
             <span className="text-sm text-muted-foreground">•</span>
             <span className="text-sm font-medium text-primary">Code</span>
@@ -324,7 +324,7 @@ export default function CodeProPage() {
               <div className="flex items-center gap-4 bg-muted px-3 py-2 rounded-full text-sm animate-slide-up delay-400">
                 <span className="text-muted-foreground">Powered by</span>
                 <Link href="/platform" className="text-primary hover:text-primary/80 font-medium transition-colors">
-                  AI Platform
+                  1 thought
                 </Link>
               </div>
             </div>

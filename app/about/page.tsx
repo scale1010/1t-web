@@ -54,9 +54,9 @@ export default function AboutPage() {
               One platform for secure, self-hosted AI.
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed">
-              Lab from SW Company helps teams run modern AI apps on their own terms—self-hosted or private cloud, model-agnostic, and built for enterprise scale.
+              1 thought AI helps teams run modern AI apps on their own terms—self-hosted or private cloud, model-agnostic, and built for enterprise scale.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            {/* <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
                 See the platform
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -67,7 +67,7 @@ export default function AboutPage() {
               <Button variant="outline" size="lg">
                 View changelog
               </Button>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -81,15 +81,15 @@ export default function AboutPage() {
                 <p className="text-lg leading-relaxed mb-6">
                   Speed matters. So does control. Most AI feels powerful until you need to run it in your environment, switch models, meet security reviews, and ship something that lasts. We're building a platform where AI is portable, private, and ready for the long run—without locking you into any one model or vendor.
                 </p>
-                <div className="flex items-center justify-between pt-6 border-t">
+                {/* <div className="flex items-center justify-between pt-6 border-t">
                   <div>
-                    <p className="font-semibold">— Vandy, on behalf of the team at SW Company</p>
+                    <p className="font-semibold">— Vandy, on behalf of the team at Scalewalk Company</p>
                   </div>
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <Mail className="h-4 w-4" />
-                    <span>hello@domain.com</span>
+                    <span>connect@scalewalk.com</span>
                   </div>
-                </div>
+                </div> */}
               </div>
             </CardContent>
           </Card>
@@ -215,7 +215,7 @@ export default function AboutPage() {
             </Card>
           </div>
           <div className="text-center mt-12">
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="outline" size="lg">
                 Explore the Platform
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -224,7 +224,7 @@ export default function AboutPage() {
                 Security & Trust
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -342,7 +342,7 @@ export default function AboutPage() {
           <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
             A single platform that powers multiple AI applications—creation, coding, research, and agentic workflows—without forcing you to change tools or vendors. Connect your identity provider, choose your models, run on your infrastructure, and keep a clean track of what happened.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
               See the platform
               <ArrowRight className="ml-2 h-4 w-4" />
@@ -350,7 +350,7 @@ export default function AboutPage() {
             <Button variant="outline" size="lg">
               View changelog
             </Button>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -381,7 +381,7 @@ export default function AboutPage() {
               <p className="text-muted-foreground">We co-develop with a handful of teams each quarter.</p>
             </div>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="outline" size="lg">
               View changelog
             </Button>
@@ -391,7 +391,7 @@ export default function AboutPage() {
             <Button variant="outline" size="lg">
               Apply as a design partner
             </Button>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -405,21 +405,21 @@ export default function AboutPage() {
             <CardContent className="p-8">
               <h3 className="text-xl font-semibold mb-4">Boilerplate (95 words)</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Lab is a platform for secure, self-hosted AI applications created by SW Company. It is model-agnostic—no AI model lock-in—and offers private-cloud and on-prem options so organizations can run AI on their own terms. With enterprise-grade identity, access, and observability, Lab lets teams build and operate AI that is portable, reliable, and ready for the long run. We favor open outputs, clear data practices, and user agency over hype.
+                1 thought AI is a platform for secure, self-hosted AI applications created by Scalewalk. It is model-agnostic—no AI model lock-in—and offers private-cloud and on-prem options so organizations can run AI on their own terms. With enterprise-grade identity, access, and observability, 1 thought AI lets teams build and operate AI that is portable, reliable, and ready for the long run. We favor open outputs, clear data practices, and user agency over hype.
               </p>
             </CardContent>
           </Card>
           <div className="grid md:grid-cols-2 gap-8">
-            <div>
+            {/* <div>
               <h3 className="text-xl font-semibold mb-4">Press kit</h3>
               <ul className="space-y-2 text-muted-foreground">
                 <li>• logos (SVG/PNG)</li>
                 <li>• platform diagram (PNG)</li>
               </ul>
-            </div>
+            </div> */}
             <div>
               <h3 className="text-xl font-semibold mb-4">Press contact</h3>
-              <p className="text-muted-foreground">press@domain.com</p>
+              <p className="text-muted-foreground">connect@scalewalk.com</p>
             </div>
           </div>
         </div>
@@ -437,23 +437,23 @@ export default function AboutPage() {
               <div className="space-y-2 text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <Mail className="h-4 w-4" />
-                  <span>General: hello@domain.com</span>
+                  <span>General: connect@scalewalk.com</span>
                 </div>
-                <div className="flex items-center gap-2">
+                {/* <div className="flex items-center gap-2">
                   <Mail className="h-4 w-4" />
                   <span>Partnerships: partners@domain.com</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Mail className="h-4 w-4" />
                   <span>Careers: careers@domain.com</span>
-                </div>
+                </div> */}
               </div>
             </div>
             <div>
               <h3 className="text-xl font-semibold mb-4">Development Centre</h3>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <MapPin className="h-4 w-4" />
-                <span>DLF, Gurgaon, India</span>
+                <span>DLF Corporate Greens, Gurgaon, India</span>
               </div>
             </div>
           </div>
@@ -461,7 +461,7 @@ export default function AboutPage() {
       </section>
 
       {/* Footer callouts */}
-      <section className="py-12 px-4 border-t">
+      {/* <section className="py-12 px-4 border-t">
         <div className="max-w-4xl mx-auto">
           <div className="flex flex-wrap justify-center gap-6 text-sm">
             <Link href="/platform" className="text-muted-foreground hover:text-foreground transition-colors">
@@ -484,7 +484,7 @@ export default function AboutPage() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <SiteFooter />
       <ChatInterface />

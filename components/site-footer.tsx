@@ -5,35 +5,35 @@ export function SiteFooter() {
   return (
     <footer className="bg-muted py-12 border-t border-border">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-8">
-          <div className="space-y-4">
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="space-y-3">
             <div className="flex items-center space-x-2">
               <Sparkles className="h-6 w-6 text-primary" />
-              <span className="text-xl font-bold font-[family-name:var(--font-work-sans)]">AI Platform</span>
+              <span className="text-xl font-bold font-[family-name:var(--font-work-sans)]">1 thought AI</span>
             </div>
-            <p className="text-muted-foreground">The ultimate AI platform for creators, developers, and researchers.</p>
+            <p className="text-muted-foreground">What will you create with 1 thought?</p>
           </div>
           <div>
             <h4 className="font-semibold mb-4">Product</h4>
             <ul className="space-y-2 text-muted-foreground">
               <li>
-                <Link href="#video" className="hover:text-foreground transition-colors">
+                <Link href="/video/pro" className="hover:text-foreground transition-colors">
                   Video Generation
                 </Link>
               </li>
               <li>
-                <Link href="#app" className="hover:text-foreground transition-colors">
+                <Link href="/code/pro" className="hover:text-foreground transition-colors">
                   App Creation
                 </Link>
               </li>
               <li>
-                <Link href="#research" className="hover:text-foreground transition-colors">
-                  Research Engine
+                <Link href="/research/pro" className="hover:text-foreground transition-colors">
+                  Deep Research
                 </Link>
               </li>
               <li>
                 <Link href="#" className="hover:text-foreground transition-colors">
-                  API Access
+                  API Access - Coming Soon
                 </Link>
               </li>
             </ul>
@@ -42,11 +42,11 @@ export function SiteFooter() {
             <h4 className="font-semibold mb-4">Company</h4>
             <ul className="space-y-2 text-muted-foreground">
               <li>
-                <Link href="#" className="hover:text-foreground transition-colors">
+                <Link href="/about" className="hover:text-foreground transition-colors">
                   About Us
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="#" className="hover:text-foreground transition-colors">
                   Careers
                 </Link>
@@ -55,15 +55,15 @@ export function SiteFooter() {
                 <Link href="#" className="hover:text-foreground transition-colors">
                   Blog
                 </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-foreground transition-colors">
+              </li>*/}
+              <li> 
+                <Link href="mailto:connect@scalewalk.com" className="hover:text-foreground transition-colors">
                   Contact
                 </Link>
               </li>
             </ul>
           </div>
-          <div>
+          {/* <div>
             <h4 className="font-semibold mb-4">Support</h4>
             <ul className="space-y-2 text-muted-foreground">
               <li>
@@ -87,10 +87,10 @@ export function SiteFooter() {
                 </Link>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
         <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
-          <p>&copy; 2024 AI Platform. All rights reserved.</p>
+          <p>&copy; 2025, 1 thought AI. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -61,7 +61,7 @@ export default function ResearchEnterprisePage() {
             onClick={handleAIPlatformClick}
             className="text-sm font-medium text-foreground hover:text-primary transition-colors"
           >
-            AI Platform
+            1 thought
           </Link>
           <span className="text-sm text-muted-foreground">•</span>
           <span className="text-sm font-medium text-primary">Research</span>

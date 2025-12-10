@@ -172,7 +172,7 @@ export default function CodeEnterprisePage() {
           <div className="flex items-center gap-2 px-4 py-2 border-b border-border">
             <Sparkles className="h-4 w-4 text-primary" />
             <Link href="/" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-              AI Platform
+              1 thought
             </Link>
             <span className="text-sm text-muted-foreground">•</span>
             <span className="text-sm font-medium text-primary">Code</span>

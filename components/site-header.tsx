@@ -37,11 +37,11 @@ export function SiteHeader() {
   }
 
   return (
-    <nav className="border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <nav className="border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 relative z-[100]">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
           <Sparkles className="h-8 w-8 text-primary" />
-          <span className="text-2xl font-bold font-[family-name:var(--font-work-sans)]">AI Platform</span>
+          <span className="text-2xl font-bold font-[family-name:var(--font-work-sans)]">1 thought AI</span>
         </Link>
         <div className="hidden md:flex items-center space-x-6">
           <div className="relative dropdown-container">
@@ -52,11 +52,11 @@ export function SiteHeader() {
                 setShowResourcesDropdown(false)
               }}
             >
-              <span>Tools</span>
+              <span>Build with AI</span>
               <ChevronDown className={`h-4 w-4 transition-transform ${showToolsDropdown ? "rotate-180" : ""}`} />
             </button>
             {showToolsDropdown && (
-              <div className="absolute top-full left-0 mt-2 w-48 bg-background border border-border rounded-lg shadow-lg z-50">
+              <div className="absolute top-full left-0 mt-2 w-48 bg-background border border-border rounded-lg shadow-lg z-[101]">
                 <div className="py-2">
                   <Link
                     href="/video/pro"
@@ -80,7 +80,7 @@ export function SiteHeader() {
                     onClick={closeDropdowns}
                   >
                     <Search className="h-4 w-4 text-blue-500" />
-                    <span>Research Engine</span>
+                    <span>Deep Research</span>
                   </Link>
                 </div>
               </div>
@@ -99,7 +99,7 @@ export function SiteHeader() {
               <ChevronDown className={`h-4 w-4 transition-transform ${showResourcesDropdown ? "rotate-180" : ""}`} />
             </button>
             {showResourcesDropdown && (
-              <div className="absolute top-full left-0 mt-2 w-48 bg-background border border-border rounded-lg shadow-lg z-50">
+              <div className="absolute top-full left-0 mt-2 w-48 bg-background border border-border rounded-lg shadow-lg z-[101]">
                 <div className="py-2">
                   <Link
                     href="/about"
@@ -122,7 +122,9 @@ export function SiteHeader() {
             )}
           </div>
 
-          <Button className="bg-blue-500 hover:bg-blue-600 text-white">Get Started</Button>
+          <Link href="https://frame.1thoughtai.com" className="flex items-center space-x-2">
+            <Button className="bg-blue-500 hover:bg-blue-600 text-white">Get Started</Button>
+          </Link>
         </div>
       </div>
     </nav>

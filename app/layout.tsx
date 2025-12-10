@@ -17,8 +17,8 @@ const openSans = Open_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "AI Platform - Generate, Create, Research",
-  description: "The ultimate AI platform for video generation, app creation, and in-depth research",
+  title: "1 thought - Generate, Create, Research",
+  description: "The ultimate 1 thought for video generation, app creation, and in-depth research",
   generator: "v0.app",
 }
 

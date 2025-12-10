@@ -83,15 +83,16 @@ export default function HomePage() {
             <div className="space-y-4">
               <Badge variant="secondary" className="w-fit mx-auto">
                 <Zap className="h-4 w-4 mr-2" />
-                Powered by Advanced AI
+                Early Access - limited preview
               </Badge>
               <h1 className="text-5xl lg:text-7xl font-bold font-[family-name:var(--font-work-sans)] leading-tight">
-                Create, Generate,
-                <span className="text-primary"> Research</span> with AI
+                What can you create with <br/>
+                <span className="text-primary"> 1 thought</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                The ultimate AI platform that transforms your ideas into reality. Generate videos, build applications,
-                and conduct in-depth research—all powered by cutting-edge artificial intelligence.
+                Code, Visualize, and Research with AI.
+                <br/>Unleash your creativity with apps, videos,
+                and in-depth analysis.
               </p>
             </div>
 
@@ -107,16 +108,18 @@ export default function HomePage() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8" onClick={scrollToTop}>
-                Start Your Journey
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent" onClick={scrollToTop}>
+              <a href="https://frame.1thoughtai.com" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="text-lg px-8" onClick={scrollToTop}>
+                  Start Your Journey
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </a>
+              {/* <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent" onClick={scrollToTop}>
                 Watch Demo
-              </Button>
+              </Button> */}
             </div>
 
-            <div className="flex items-center justify-center space-x-6 text-sm text-muted-foreground">
+            {/* <div className="flex items-center justify-center space-x-6 text-sm text-muted-foreground">
               <div className="flex items-center space-x-2">
                 <Users className="h-4 w-4" />
                 <span>10,000+ users</span>
@@ -125,7 +128,7 @@ export default function HomePage() {
                 <Star className="h-4 w-4 fill-current text-yellow-500" />
                 <span>4.9/5 rating</span>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -285,7 +288,7 @@ export default function HomePage() {
 
               <Link href="/code/pro">
                 <Button size="lg" className="bg-blue-500 hover:bg-blue-500/90 text-white" onClick={scrollToTop}>
-                  Start Building Your App
+                  Join beta program
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
@@ -377,10 +380,12 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <Button size="lg" className="bg-blue-500 hover:bg-blue-500/90 text-white" onClick={scrollToTop}>
-                Start Your Research
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+              <Link href="/research/pro">
+                <Button size="lg" className="bg-blue-500 hover:bg-blue-500/90 text-white" onClick={scrollToTop}>
+                  Join beta program
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
             </div>
 
             <div
@@ -413,20 +418,20 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl font-bold font-[family-name:var(--font-work-sans)] mb-2">50K+</div>
-              <div className="text-white/80">Videos Generated</div>
+              <div className="text-4xl font-bold font-[family-name:var(--font-work-sans)] mb-2">50+</div>
+              <div className="text-white/80">Tools</div>
             </div>
             <div>
-              <div className="text-4xl font-bold font-[family-name:var(--font-work-sans)] mb-2">25K+</div>
-              <div className="text-white/80">Apps Created</div>
+              <div className="text-4xl font-bold font-[family-name:var(--font-work-sans)] mb-2">25+</div>
+              <div className="text-white/80">Premium AI Models</div>
             </div>
             <div>
               <div className="text-4xl font-bold font-[family-name:var(--font-work-sans)] mb-2">100K+</div>
-              <div className="text-white/80">Research Reports</div>
+              <div className="text-white/80">Data Assets</div>
             </div>
             <div>
-              <div className="text-4xl font-bold font-[family-name:var(--font-work-sans)] mb-2">99.9%</div>
-              <div className="text-white/80">Uptime</div>
+              <div className="text-4xl font-bold font-[family-name:var(--font-work-sans)] mb-2">& 1</div>
+              <div className="text-white/80">Thought</div>
             </div>
           </div>
         </div>
@@ -440,17 +445,19 @@ export default function HomePage() {
               Ready to Transform Your Ideas?
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Join thousands of creators, developers, and researchers who are already using our AI platform to bring
+              Join the community of creators, developers, and researchers who are unleashing their creativity with 1 thought to bring
               their visions to life.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="https://frame.1thoughtai.com">
               <Button size="lg" className="text-lg px-8" onClick={scrollToTop}>
                 Get Started Free
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent" onClick={scrollToTop}>
+              </Link>
+              {/* <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent" onClick={scrollToTop}>
                 Schedule Demo
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>

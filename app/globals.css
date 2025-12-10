@@ -323,4 +323,30 @@
   .pro-border {
     border-color: var(--pro-border);
   }
+
+  /* Hide chat interface - targets the fixed chat box at bottom */
+  /* Multiple selectors to ensure it's hidden */
+  div.fixed.z-50:has([class*="max-w-4xl"]),
+  div.fixed.z-50:has([class*="w-[90vw]"]) {
+    display: none !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+  
+  /* Ensure header and dropdowns are above everything */
+  nav[class*="border-b"] {
+    position: relative;
+    z-index: 100 !important;
+  }
+  
+  /* Ensure header dropdowns are clickable */
+  nav[class*="border-b"] .dropdown-container {
+    position: relative;
+    z-index: 101 !important;
+  }
+  
+  nav[class*="border-b"] .dropdown-container > div[class*="absolute"] {
+    z-index: 102 !important;
+  }
 }
