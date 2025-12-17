@@ -57,7 +57,7 @@ export function SiteFooter() {
                 </Link>
               </li>*/}
               <li> 
-                <Link href="mailto:connect@scalewalk.com" className="hover:text-foreground transition-colors">
+                <Link href="/contact" className="hover:text-foreground transition-colors">
                   Contact
                 </Link>
               </li>
@@ -90,7 +90,7 @@ export function SiteFooter() {
           </div> */}
         </div>
         <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
-          <p>&copy; 2025, 1 thought AI. All rights reserved.</p>
+          <p>&copy; 2025, ScaleWalk Private Limited. All rights reserved.</p>
         </div>
       </div>
     </footer>

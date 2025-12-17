@@ -54,7 +54,7 @@ export default function AboutPage() {
               One platform for secure, self-hosted AI.
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed">
-              1 thought AI helps teams run modern AI apps on their own terms—self-hosted or private cloud, model-agnostic, and built for enterprise scale.
+              1 thought AI helps teams run modern AI apps on their own terms—self-hosted or cloud, model-agnostic, and built for masssive scale.
             </p>
             {/* <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
@@ -234,7 +234,7 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6">How we help</h2>
-            <p className="text-xl text-muted-foreground">Plain language</p>
+            <p className="text-xl text-muted-foreground">Simplicity and control</p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="border-0 shadow-lg">
@@ -399,11 +399,11 @@ export default function AboutPage() {
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">Press & boilerplate</h2>
+            <h2 className="text-4xl font-bold mb-6">Press</h2>
           </div>
           <Card className="border-0 shadow-lg mb-8">
             <CardContent className="p-8">
-              <h3 className="text-xl font-semibold mb-4">Boilerplate (95 words)</h3>
+              <h3 className="text-xl font-semibold mb-4">Platform Summary</h3>
               <p className="text-muted-foreground leading-relaxed">
                 1 thought AI is a platform for secure, self-hosted AI applications created by Scalewalk. It is model-agnostic—no AI model lock-in—and offers private-cloud and on-prem options so organizations can run AI on their own terms. With enterprise-grade identity, access, and observability, 1 thought AI lets teams build and operate AI that is portable, reliable, and ready for the long run. We favor open outputs, clear data practices, and user agency over hype.
               </p>
@@ -429,15 +429,16 @@ export default function AboutPage() {
       <section className="py-20 px-4 bg-muted/30">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">Contact & footprint</h2>
+            <h2 className="text-4xl font-bold mb-6">Contact</h2>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             <div>
               <h3 className="text-xl font-semibold mb-4">Contact</h3>
               <div className="space-y-2 text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <Mail className="h-4 w-4" />
-                  <span>General: connect@scalewalk.com</span>
+                  <span>connect@scalewalk.com/+91 98999 54154</span>
+                  
                 </div>
                 {/* <div className="flex items-center gap-2">
                   <Mail className="h-4 w-4" />
@@ -450,10 +451,17 @@ export default function AboutPage() {
               </div>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-4">Development Centre</h3>
+              <h3 className="text-xl font-semibold mb-4">Meet us at</h3>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <MapPin className="h-4 w-4" />
-                <span>DLF Corporate Greens, Gurgaon, India</span>
+                <span>DLF Corporate Greens, T2/801, Gurgaon, India</span>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-4">Registered office</h3>
+              <div className="flex items-center gap-2 text-muted-foreground">
+                <MapPin className="h-4 w-4" />
+                <span>EB191 Maya Enclave, New Delhi, India</span>
               </div>
             </div>
           </div>

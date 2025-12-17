@@ -297,24 +297,28 @@ export default function VideoProPage() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 animate-slide-up delay-300">
-                <button
-                  data-cta="start-free"
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
-                >
-                  Start free
-                </button>
-                <button
-                  data-cta="try-template"
-                  className="border border-border hover:border-primary text-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-md"
-                >
-                  Try a template
-                </button>
+                <Link href="https://frame.1thoughtai.com" target="_blank" rel="noopener noreferrer">
+                  <button
+                    data-cta="start-free"
+                    className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                  >
+                    Start free
+                  </button>
+                </Link>
+                <Link href="https://frame.1thoughtai.com" target="_blank" rel="noopener noreferrer">
+                  <button
+                    data-cta="try-template"
+                    className="border border-border hover:border-primary text-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-md"
+                  >
+                    Try a template
+                  </button>
+                </Link>
               </div>
 
               <div className="flex items-center gap-4 bg-muted px-3 py-2 rounded-full text-sm animate-slide-up delay-400">
                 <span className="text-muted-foreground">Powered by</span>
                 <Link href="/platform" className="text-primary hover:text-primary/80 font-medium transition-colors">
-                  Lab
+                  1 thought AI platform
                 </Link>
               </div>
             </div>
@@ -467,7 +471,11 @@ export default function VideoProPage() {
             Professional editor, simplified
           </h2>
           <div className="aspect-video bg-card border border-border rounded-2xl overflow-hidden shadow-2xl">
-            <img src="/placeholder-8ilyq.png" alt="VX Pro Editor Interface" className="w-full h-full object-cover" />
+            <img
+              src="/frame-home.png"
+              alt="Frame home interface"
+              className="w-full h-full object-cover"
+            />
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
@@ -567,15 +575,17 @@ export default function VideoProPage() {
                       </li>
                     ))}
                   </ul>
-                  <button
-                    className={`w-full py-3 rounded-lg font-medium transition-colors ${
-                      plan.popular
-                        ? "bg-primary hover:bg-primary/90 text-primary-foreground"
-                        : "border border-border hover:border-primary text-foreground"
-                    }`}
-                  >
-                    {plan.cta}
-                  </button>
+                  <Link href="https://frame.1thoughtai.com" target="_blank" rel="noopener noreferrer">
+                    <button
+                      className={`w-full py-3 rounded-lg font-medium transition-colors ${
+                        plan.popular
+                          ? "bg-primary hover:bg-primary/90 text-primary-foreground"
+                          : "border border-border hover:border-primary text-foreground"
+                      }`}
+                    >
+                      {plan.cta}
+                    </button>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -618,18 +628,22 @@ export default function VideoProPage() {
             Create your first video today
           </h3>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <button
-              data-cta="start-free"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
-            >
-              Start free
-            </button>
-            <button
-              data-cta="try-template"
-              className="border border-border hover:border-primary text-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-md"
-            >
-              Try a template
-            </button>
+            <Link href="https://frame.1thoughtai.com" target="_blank" rel="noopener noreferrer">
+              <button
+                data-cta="start-free"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
+              >
+                Start free
+              </button>
+            </Link>
+            <Link href="https://frame.1thoughtai.com" target="_blank" rel="noopener noreferrer">
+              <button
+                data-cta="try-template"
+                className="border border-border hover:border-primary text-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-md"
+              >
+                Try a template
+              </button>
+            </Link>
           </div>
           <Link
             href="/video/enterprise"

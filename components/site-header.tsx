@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { useRouter, usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
-import { Sparkles, ChevronDown, Video, Code, Search, BookOpen, Lightbulb } from "lucide-react"
+import { Sparkles, ChevronDown, Video, Code, Search, BookOpen, Lightbulb, Mail } from "lucide-react"
 
 export function SiteHeader() {
   const [showToolsDropdown, setShowToolsDropdown] = useState(false)
@@ -41,7 +41,7 @@ export function SiteHeader() {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
           <Sparkles className="h-8 w-8 text-primary" />
-          <span className="text-2xl font-bold font-[family-name:var(--font-work-sans)]">1 thought AI</span>
+          <span className="text-2xl font-bold font-[family-name:var(--font-work-sans)]">1thought AI</span>
         </Link>
         <div className="hidden md:flex items-center space-x-6">
           <div className="relative dropdown-container">
@@ -116,6 +116,14 @@ export function SiteHeader() {
                   >
                     <Lightbulb className="h-4 w-4 text-blue-500" />
                     <span>Inspiration</span>
+                  </Link>
+                  <Link
+                    href="/contact"
+                    className="flex items-center space-x-3 px-4 py-2 text-sm hover:bg-muted transition-colors"
+                    onClick={closeDropdowns}
+                  >
+                    <Mail className="h-4 w-4 text-blue-500" />
+                    <span>Contact</span>
                   </Link>
                 </div>
               </div>
