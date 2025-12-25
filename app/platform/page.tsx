@@ -84,7 +84,7 @@ export default function PlatformPage() {
                 One platform. Many AI tools. Zero governance gaps.
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                [Lab] unifies identity, policy, and telemetry across Video, Code-gen, and Deep Research—so you can move fast without losing control.
+                1 thought AI unifies identity, policy, and telemetry across Video, Code-gen, and Deep Research—so you can move fast without losing control.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -105,7 +105,7 @@ export default function PlatformPage() {
               <div className="aspect-video bg-muted rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500">
                 <img
                   src="/placeholder-8ilyq.png"
-                  alt="Lab Platform Architecture"
+                  alt="1 thought AI Platform Architecture"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />
               </div>
@@ -114,7 +114,7 @@ export default function PlatformPage() {
         </div>
       </section>
 
-      {/* Why Lab Section */}
+      {/* Why 1 thought AI Section */}
       <section className="py-16 px-4 bg-gradient-to-br from-blue-500/5 to-transparent">
         <div className="container mx-auto max-w-7xl">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
@@ -143,7 +143,7 @@ export default function PlatformPage() {
           <div className="aspect-video bg-muted rounded-2xl overflow-hidden shadow-2xl mb-6">
             <img
               src="/placeholder-8ilyq.png"
-              alt="Lab Platform Architecture Diagram"
+              alt="1 thought AI Platform Architecture Diagram"
               className="w-full h-full object-cover"
             />
           </div>
@@ -448,7 +448,7 @@ export default function PlatformPage() {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold font-[family-name:var(--font-work-sans)] mb-4">
-              What runs on [Lab]
+              What runs on 1 thought AI
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -499,7 +499,7 @@ export default function PlatformPage() {
             <h2 className="text-3xl sm:text-4xl font-bold font-[family-name:var(--font-work-sans)] mb-4">
               On-prem / Private Cloud hosting
             </h2>
-            <p className="text-xl text-muted-foreground">Choose where [Lab] runs—SaaS, your VPC, or your data center.</p>
+            <p className="text-xl text-muted-foreground">Choose where 1 thought AI runs—SaaS, your VPC, or your data center.</p>
           </div>
 
           {/* Deployment Options */}
@@ -714,7 +714,7 @@ export default function PlatformPage() {
           <div className="max-w-4xl mx-auto">
             <Card className="mb-8">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-semibold mb-4">[Lab] Platform (enterprise-required)</h3>
+                <h3 className="text-2xl font-semibold mb-4">1 thought AI Platform (enterprise-required)</h3>
                 <p className="text-muted-foreground mb-4">
                   Identity, policy, telemetry, audit APIs, router, connectors
                 </p>
@@ -787,7 +787,7 @@ export default function PlatformPage() {
                 a: "Yes—allow-list providers/versions; route by task; set budgets & replays.",
               },
               {
-                q: "Do we need all products to use [Lab]?",
+                q: "Do we need all products to use 1 thought AI?",
                 a: "No—start with one and expand; policies & identity carry over.",
               },
               {

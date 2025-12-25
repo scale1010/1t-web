@@ -32,6 +32,11 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
+                <Link href="/platform" className="hover:text-foreground transition-colors">
+                  Platform
+                </Link>
+              </li>
+              <li>
                 <Link href="#" className="hover:text-foreground transition-colors">
                   API Access - Coming Soon
                 </Link>
@@ -59,6 +64,21 @@ export function SiteFooter() {
               <li> 
                 <Link href="/contact" className="hover:text-foreground transition-colors">
                   Contact
+                </Link>
+              </li>
+              <li> 
+                <Link href="/terms" className="hover:text-foreground transition-colors">
+                  Terms of Service
+                </Link>
+              </li>
+              <li> 
+                <Link href="/privacy" className="hover:text-foreground transition-colors">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li> 
+                <Link href="/refund" className="hover:text-foreground transition-colors">
+                  Refund Policy
                 </Link>
               </li>
             </ul>
@@ -90,7 +110,18 @@ export function SiteFooter() {
           </div> */}
         </div>
         <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
-          <p>&copy; 2025, ScaleWalk Private Limited. All rights reserved.</p>
+          <p>
+            &copy; 2026,{" "}
+            <Link 
+              href="https://www.scalewalk.com" 
+              className="hover:text-foreground transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ScaleWalk Private Limited
+            </Link>
+            . All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

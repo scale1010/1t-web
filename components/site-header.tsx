@@ -1,29 +1,17 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
-import { useRouter, usePathname } from "next/navigation"
+import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Sparkles, ChevronDown, Video, Code, Search, BookOpen, Lightbulb, Mail } from "lucide-react"
 
 export function SiteHeader() {
   const [showToolsDropdown, setShowToolsDropdown] = useState(false)
   const [showResourcesDropdown, setShowResourcesDropdown] = useState(false)
-  const router = useRouter()
   const pathname = usePathname()
-
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      const target = event.target as Element
-      if (!target.closest(".dropdown-container")) {
-        setShowToolsDropdown(false)
-        setShowResourcesDropdown(false)
-      }
-    }
-
-    document.addEventListener("click", handleClickOutside)
-    return () => document.removeEventListener("click", handleClickOutside)
-  }, [])
+  const toolsRef = useRef<HTMLDivElement>(null)
+  const resourcesRef = useRef<HTMLDivElement>(null)
 
   // Close dropdowns when pathname changes
   useEffect(() => {
@@ -31,7 +19,48 @@ export function SiteHeader() {
     setShowResourcesDropdown(false)
   }, [pathname])
 
-  const closeDropdowns = () => {
+  // Handle clicks outside dropdowns
+  useEffect(() => {
+    if (!showToolsDropdown && !showResourcesDropdown) {
+      return
+    }
+
+    const handleClick = (event: MouseEvent) => {
+      const target = event.target as Node
+
+      // Check if click is outside tools dropdown
+      if (showToolsDropdown && toolsRef.current && !toolsRef.current.contains(target)) {
+        setShowToolsDropdown(false)
+      }
+
+      // Check if click is outside resources dropdown
+      if (showResourcesDropdown && resourcesRef.current && !resourcesRef.current.contains(target)) {
+        setShowResourcesDropdown(false)
+      }
+    }
+
+    // Use setTimeout to ensure this runs after React's onClick handlers
+    const timeoutId = setTimeout(() => {
+      document.addEventListener("click", handleClick, true)
+    }, 0)
+
+    return () => {
+      clearTimeout(timeoutId)
+      document.removeEventListener("click", handleClick, true)
+    }
+  }, [showToolsDropdown, showResourcesDropdown])
+
+  const toggleToolsDropdown = () => {
+    setShowToolsDropdown((prev) => !prev)
+    setShowResourcesDropdown(false)
+  }
+
+  const toggleResourcesDropdown = () => {
+    setShowResourcesDropdown((prev) => !prev)
+    setShowToolsDropdown(false)
+  }
+
+  const closeAllDropdowns = () => {
     setShowToolsDropdown(false)
     setShowResourcesDropdown(false)
   }
@@ -43,25 +72,35 @@ export function SiteHeader() {
           <Sparkles className="h-8 w-8 text-primary" />
           <span className="text-2xl font-bold font-[family-name:var(--font-work-sans)]">1thought AI</span>
         </Link>
+        
         <div className="hidden md:flex items-center space-x-6">
-          <div className="relative dropdown-container">
+          {/* Build with AI Dropdown */}
+          <div className="relative" ref={toolsRef}>
             <button
+              type="button"
               className="flex items-center space-x-1 text-muted-foreground hover:text-foreground transition-colors"
-              onClick={() => {
-                setShowToolsDropdown(!showToolsDropdown)
-                setShowResourcesDropdown(false)
+              onClick={(e) => {
+                e.stopPropagation()
+                toggleToolsDropdown()
               }}
+              aria-expanded={showToolsDropdown}
+              aria-haspopup="true"
             >
               <span>Build with AI</span>
-              <ChevronDown className={`h-4 w-4 transition-transform ${showToolsDropdown ? "rotate-180" : ""}`} />
+              <ChevronDown 
+                className={`h-4 w-4 transition-transform duration-200 ${
+                  showToolsDropdown ? "rotate-180" : ""
+                }`} 
+              />
             </button>
+            
             {showToolsDropdown && (
               <div className="absolute top-full left-0 mt-2 w-48 bg-background border border-border rounded-lg shadow-lg z-[101]">
                 <div className="py-2">
                   <Link
                     href="/video/pro"
                     className="flex items-center space-x-3 px-4 py-2 text-sm hover:bg-muted transition-colors"
-                    onClick={closeDropdowns}
+                    onClick={closeAllDropdowns}
                   >
                     <Video className="h-4 w-4 text-blue-500" />
                     <span>Video Generation</span>
@@ -69,7 +108,7 @@ export function SiteHeader() {
                   <Link
                     href="/code/pro"
                     className="flex items-center space-x-3 px-4 py-2 text-sm hover:bg-muted transition-colors"
-                    onClick={closeDropdowns}
+                    onClick={closeAllDropdowns}
                   >
                     <Code className="h-4 w-4 text-blue-500" />
                     <span>Code Generation</span>
@@ -77,7 +116,7 @@ export function SiteHeader() {
                   <Link
                     href="/research/pro"
                     className="flex items-center space-x-3 px-4 py-2 text-sm hover:bg-muted transition-colors"
-                    onClick={closeDropdowns}
+                    onClick={closeAllDropdowns}
                   >
                     <Search className="h-4 w-4 text-blue-500" />
                     <span>Deep Research</span>
@@ -87,24 +126,33 @@ export function SiteHeader() {
             )}
           </div>
 
-          <div className="relative dropdown-container">
+          {/* Resources Dropdown */}
+          <div className="relative" ref={resourcesRef}>
             <button
+              type="button"
               className="flex items-center space-x-1 text-muted-foreground hover:text-foreground transition-colors"
-              onClick={() => {
-                setShowResourcesDropdown(!showResourcesDropdown)
-                setShowToolsDropdown(false)
+              onClick={(e) => {
+                e.stopPropagation()
+                toggleResourcesDropdown()
               }}
+              aria-expanded={showResourcesDropdown}
+              aria-haspopup="true"
             >
               <span>Resources</span>
-              <ChevronDown className={`h-4 w-4 transition-transform ${showResourcesDropdown ? "rotate-180" : ""}`} />
+              <ChevronDown 
+                className={`h-4 w-4 transition-transform duration-200 ${
+                  showResourcesDropdown ? "rotate-180" : ""
+                }`} 
+              />
             </button>
+            
             {showResourcesDropdown && (
               <div className="absolute top-full left-0 mt-2 w-48 bg-background border border-border rounded-lg shadow-lg z-[101]">
                 <div className="py-2">
                   <Link
                     href="/about"
                     className="flex items-center space-x-3 px-4 py-2 text-sm hover:bg-muted transition-colors"
-                    onClick={closeDropdowns}
+                    onClick={closeAllDropdowns}
                   >
                     <BookOpen className="h-4 w-4 text-blue-500" />
                     <span>About</span>
@@ -112,7 +160,7 @@ export function SiteHeader() {
                   <Link
                     href="/inspiration"
                     className="flex items-center space-x-3 px-4 py-2 text-sm hover:bg-muted transition-colors"
-                    onClick={closeDropdowns}
+                    onClick={closeAllDropdowns}
                   >
                     <Lightbulb className="h-4 w-4 text-blue-500" />
                     <span>Inspiration</span>
@@ -120,7 +168,7 @@ export function SiteHeader() {
                   <Link
                     href="/contact"
                     className="flex items-center space-x-3 px-4 py-2 text-sm hover:bg-muted transition-colors"
-                    onClick={closeDropdowns}
+                    onClick={closeAllDropdowns}
                   >
                     <Mail className="h-4 w-4 text-blue-500" />
                     <span>Contact</span>
@@ -130,6 +178,7 @@ export function SiteHeader() {
             )}
           </div>
 
+          {/* Get Started Button */}
           <Link href="https://frame.1thoughtai.com" className="flex items-center space-x-2">
             <Button className="bg-blue-500 hover:bg-blue-600 text-white">Get Started</Button>
           </Link>
